@@ -17,8 +17,8 @@ $(document).ready(function()
 	$('.accordion-content').css({'width' : contentwidth });
 	
 	//Open The First Accordion Section When Page Loads
-	$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-	$('.accordion-content').first().slideDown().toggleClass('open-content');
+	//$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
+	//$('.accordion-content').first().slideDown().toggleClass('open-content');
 	
 	// The Accordion Effect
 	$('.accordion-header').click(function () {
