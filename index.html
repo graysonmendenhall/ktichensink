@@ -12,42 +12,78 @@
 	  padding: 0;
 	}
       </style>
+      
+       <style type="text/css">
+      #map-canvas {
+	height: 50%;
+	width: 91%;
+	margin: 0 0 20px 15px;
+	padding: 0 0 0 0;}
+    </style>
+      
+      <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDexT_U6gthKGQI7zXazzOPMZfSgXb-n54">
+    </script>
+      
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 35.912079, lng:  -79.051242},
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
   <body>
     
     <div class="row">
-      <div class="large-12 columns" style="padding: 0">
-	<div class="icon-bar five-up">
-  <a class="item">
-    <i class="fa fa-home"></i>
-    <label>Home</label>
-    
-  </a>
-  <a class="item">
-    <i class="fa fa-bookmark-o"></i>
-    <label>Bookmark</label>
-  </a>
-  <a class="item">
-    <i class="fa fa-info-circle"></i>
-    <label>Info</label>
-  </a>
-  <a class="item">
-    <i class="fa fa-pencil-square-o"></i>
-    <label>Mail</label>
-  </a>
-  <a class="item">
-    <i class="fa fa-thumbs-o-up"></i>
-    <label>Like</label>
-  </a>
-	</div>
-</div>
-	
-        <h1>Welcome to the Kitchen Sink!!!!!</h1>
-      </div>
+      <div class="large-12 columns" style="padding: 0; height: 20px; background-color: #ffffff;">
     </div>
     
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-12 columns" style="padding: 0">
+	
+	<div class="icon-bar five-up" style="height: 50px;">
+  <a class="item" style="float: left; margin-top: -10px;">
+    <i class="fa fa-home"></i>
+    </a>
+  
+  <div class="large-8 medium-8 columns"><h2 style="color: #FFFFFF; margin-left: 45px;">PathMinder</h2></div>
+  
+  <a class="item" style="float: right; margin-top: -10px;">
+    <i class="fa fa-bars"></i>
+    
+  </a>
+	</div>
+	
+</div>
+	
+				   
+    </div>
+    </div>
+    
+    
+      
+      <div id="map-canvas" ></div>
+      
+    <div class="row">
+				    
+	  <div class="row collapse">
+	  <label style="margin-left: 50px; margin-bottom: 3px;"><b>Find a Destination</b></label>
+	  <div class="small-9 columns" style="margin-left: 50px;">
+	  <input type="text" placeholder="Where do you want to go?"/>
+	  </div>
+				        
+	</div>
+    
+    <div class="row">
+      <div class="large-12 columns" style="padding-left: 10px; padding-right: 10px;">
+	
+      
+      
       	<div class="panel">
 	        <h3>This will be the testing ground for my Mobile App Design course at UNC.</h3>
 	        <p>The app I want to build will essentially be a mobile scavenger hunt app where users can create their own scavenger hunt items/locations using GPS location data and invite people to participate in the scavenger hunt via the app. When a participant finds a hunt item, the app can either automatically check them in or the participant can manually check in and send out a message to other participants.</p>
