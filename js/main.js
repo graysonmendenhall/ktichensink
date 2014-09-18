@@ -1,15 +1,23 @@
-function launchCamera(){
-    console.log("hooray!")
-navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.DATA_URL
-});
+function capturePhoto(){
+    //alert("hooray!");
+navigator.camera.getPicture(uploadPhoto, null, {sourceType:1,quality: 60});
 }
 
-function onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
+function uploadPhoto(data){
+    //where you send the image file to the server
+    
+        cameraPic.src = data;
+            //cameraPic.src = "data:image/jpeg;base64," + data;
+            //Successful upload to the server
+            navigator.notification.alert(
+                'Your Photo has been uploaded',
+                okay,
+            'Photo Uploaded',
+            'OK'
+             
+            );
 }
 
-function onFail(message) {
-    alert('Failed because: ' + message);
+function okay(){
+    // Do something
 }

@@ -70,7 +70,7 @@
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   
-  var image = 'imgs/icon.png';
+  var image = 'imgs/icon_sm.png';
   
   var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
@@ -357,6 +357,22 @@ function handleNoGeolocation(errorFlag) {
       <div class="borderbox" style="height: 450px; margin-bottom: -215px;">
 	<div id="map-canvas"></div>
       </div>
+      
+      <div>
+	<h4>Camera Test</h4>
+	<div id="camera">
+	  <button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
+	  
+	    <div style="text-align:center;margin:20px;">
+	      
+	      <img id="cameraPic" src="" style="width:auto; height: 120px;"></img>
+	      
+	    </div>
+	  
+	</div>
+	
+      </div>
+      
     <div class="row">
 				    
 	  <div class="row collapse">
@@ -364,7 +380,7 @@ function handleNoGeolocation(errorFlag) {
 	    <div class="small-8 columns" style="margin-left: 15px; float: left;">
 	    <input type="text" placeholder="Where would you like to go?"/>
 	  </div>
-		<a href="#" class="button tiny radius" onclick="launchCamera()" style="margin-right: 10px; float: right; font-size: .75em;">Find it!</a>
+		
 	    		        
 	</div>
     
