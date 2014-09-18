@@ -1,0 +1,200 @@
+var image = 'imgs/icon_sm.png';
+  
+  var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Carroll Hall</h3>'+
+      '<img src="imgs/carroll.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p><b>Carroll Hall</b> is the home of the School of Journalism and Mass Communication.</p>'+
+      '<p>Source: <a href="http://www.jomc.unc.edu/">'+
+      'UNC JOMC Homepage</a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1,
+      maxWidth: 250
+    
+  });
+  
+  var carroll = new google.maps.Marker({
+      position: new google.maps.LatLng(35.910520, -79.051727),
+      map: map,
+      title: 'Carroll Hall',
+      icon: image
+
+  });
+  
+  google.maps.event.addListener(carroll, 'click', function() {
+    infowindow1.open(map,carroll);
+  });
+  
+  var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Carolina Union</h3>'+
+      '<img src="imgs/union.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is the <b>Carolina Union</b>.</p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2,
+      maxWidth: 250
+  });
+  
+  var union = new google.maps.Marker({
+      position: new google.maps.LatLng(35.910563, -79.047758),
+      map: map,
+      title: 'Carolina Union',
+      icon: image
+
+  });
+  
+    google.maps.event.addListener(union, 'click', function() {
+    infowindow2.open(map,union);
+  });
+    
+    var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Morehead Planetarium</h3>'+
+      '<img src="imgs/planetarium.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is the <b>Morehead Planetarium</b>. They make all kinds of cool shows and have summer camps for kids.</p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3,
+      maxWidth: 250
+  });
+  
+  var planetarium = new google.maps.Marker({
+      position: new google.maps.LatLng(35.913848, -79.050590),
+      map: map,
+      title: 'Morehead Planetarium',
+      icon: image
+
+  });
+  
+  google.maps.event.addListener(planetarium, 'click', function() {
+    infowindow3.open(map,planetarium);
+  });
+  
+  var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Hanes Art Center</h3>'+
+      '<img src="imgs/hanes.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is the <b>Hanes Art Center</b>. This is where all of the art majors have class. There are always some cool sculptures in their lobby.</p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4,
+      maxWidth: 250
+  });
+   
+  var hanes = new google.maps.Marker({
+      position: new google.maps.LatLng(35.912353, -79.054438),
+      map: map,
+      title: 'Hanes Art Center',
+      icon: image
+
+  });
+  
+  google.maps.event.addListener(hanes, 'click', function() {
+    infowindow4.open(map,hanes);
+  });
+  
+  var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Kenan Memorial Stadium</h3>'+
+      '<img src="imgs/kenan.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is <b>Kenan Memorial Stadium</b>. This is where all of the home football games are played. Go Heels!</p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5,
+      maxWidth: 250
+  });
+  
+  var kenan = new google.maps.Marker({
+      position: new google.maps.LatLng(35.906550, -79.047070),
+      map: map,
+      title: 'Kenan Memorial Stadium',
+      icon: image
+
+  });
+  
+  google.maps.event.addListener(kenan, 'click', function() {
+    infowindow5.open(map,kenan);
+  });
+  
+  var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Dean E. Smith Center</h3>'+
+      '<img src="imgs/smith.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is the <b>Dean E. Smith Center</b>. This is where all of the home basketball games are played. Go Heels!</p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow6 = new google.maps.InfoWindow({
+      content: contentString6,
+      maxWidth: 250
+  });
+  
+  var smith = new google.maps.Marker({
+      position: new google.maps.LatLng(35.899545, -79.043959),
+      map: map,
+      title: 'Dean E. Smith Center',
+      icon: image
+
+  });
+  
+  google.maps.event.addListener(smith, 'click', function() {
+    infowindow6.open(map,smith);
+  });
+  
+  var contentString7 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">University of North Carolina Hospitals</h3>'+
+      '<img src="imgs/hospitals.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<div id="bodyContent">'+
+      '<p>This is the <b>UNC Hospitals</b> complex. This is where the massive hospital is. This is also where all of the medical and nursing school buildings are. </p>'+
+     '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow7 = new google.maps.InfoWindow({
+      content: contentString7,
+      maxWidth: 250
+  });
+  
+  var hospital = new google.maps.Marker({
+      position: new google.maps.LatLng(35.903821, -79.050782),
+      map: map,
+      title: 'University of North Carolina Hospitals',
+      icon: image
+
+  });
+  
+   google.maps.event.addListener(hospital, 'click', function() {
+    infowindow7.open(map,hospital);
+  });
