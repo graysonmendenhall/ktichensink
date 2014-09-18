@@ -21,3 +21,11 @@ function uploadPhoto(data){
 function okay(){
     // Do something
 }
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    console.log("onDeviceReady()");
+    navigator.geolocation.getCurrentPosition(generateMap, onError);
+   
+}

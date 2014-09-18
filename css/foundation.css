@@ -6030,3 +6030,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+#map-canvas{
+  
+  border: 1px solid #bdbdbd;
+}
