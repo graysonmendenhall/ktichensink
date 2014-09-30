@@ -3,36 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>PathMinder - Find Your Way</title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <style>
 	.columns {
 	  padding: 0;
 	}
-      </style>
-      
-       <style type="text/css">
-      #map-canvas {
+	
+	#map-canvas {
 	height: 50%;
 	width: 91%;
 	margin: 0 0 20px 15px;
-	padding: 0 0 0 0;}
-    </style>
-      <script type="text/javascript" src="js/main.js">
-    </script>
+	padding: 0 0 0 0;
+	}
+	
+      </style>
+      <script src="js/vendor/modernizr.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
       <script src="phonegap.js"></script>
-      <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDexT_U6gthKGQI7zXazzOPMZfSgXb-n54">
-    </script>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDexT_U6gthKGQI7zXazzOPMZfSgXb-n54"></script>
+      <script src="js/map.js"></script>
       
-    <script src="js/map.js"></script>
-      
-    <script type="text/javascript">
+      <script type="text/javascript">
     function initialize() {
 
-  // Create an array of styles.
+  // Color styles for PathMinder map
   var styles = [
     {
       stylers: [
@@ -55,16 +51,13 @@
     }
   ];
 
-  // Create a new StyledMapType object, passing it the array of styles,
-  // as well as the name to be displayed on the map type control.
+
   var styledMap = new google.maps.StyledMapType(styles,
     {name: "Styled Map"});
 
-  // Create a map object, and include the MapTypeId to add
-  // to the map type control.
   var mapOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(35.912079, -79.051242),
+    zoom: 14,
+    center: new google.maps.LatLng(35.906550, -79.047070),
     disableDefaultUI: true
     
   };
@@ -74,7 +67,12 @@
     mapOptions);
   
   
-  var image = 'imgs/icon_sm.png';
+  var image1 = 'imgs/blue_pin.png';
+  var image2 = 'imgs/green_pin.png';
+  var image3 = 'imgs/red_pin.png';
+  var image4 = 'imgs/purple_pin.png';
+  var image5 = 'imgs/yellow_pin.png';
+  
   
   var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
@@ -99,7 +97,7 @@
       position: new google.maps.LatLng(35.910520, -79.051727),
       map: map,
       title: 'Carroll Hall',
-      icon: image
+      icon: image1
 
   });
   
@@ -129,7 +127,7 @@
       position: new google.maps.LatLng(35.910563, -79.047758),
       map: map,
       title: 'Carolina Union',
-      icon: image
+      icon: image4
 
   });
   
@@ -159,7 +157,7 @@
       position: new google.maps.LatLng(35.913848, -79.050590),
       map: map,
       title: 'Morehead Planetarium',
-      icon: image
+      icon: image5
 
   });
   
@@ -189,7 +187,7 @@
       position: new google.maps.LatLng(35.912353, -79.054438),
       map: map,
       title: 'Hanes Art Center',
-      icon: image
+      icon: image1
 
   });
   
@@ -219,7 +217,7 @@
       position: new google.maps.LatLng(35.906550, -79.047070),
       map: map,
       title: 'Kenan Memorial Stadium',
-      icon: image
+      icon: image2
 
   });
   
@@ -249,7 +247,7 @@
       position: new google.maps.LatLng(35.899545, -79.043959),
       map: map,
       title: 'Dean E. Smith Center',
-      icon: image
+      icon: image2
 
   });
   
@@ -279,7 +277,7 @@
       position: new google.maps.LatLng(35.903821, -79.050782),
       map: map,
       title: 'University of North Carolina Hospitals',
-      icon: image
+      icon: image5
 
   });
   
@@ -311,7 +309,7 @@
       position: new google.maps.LatLng(35.902793, -79.045186),
       map: map,
       title: 'Craige Residence Hall',
-      icon: image
+      icon: image3
 
   });
   
@@ -326,15 +324,11 @@
   });
    
    
-   
-  
- 
 
-  //Associate the styled map with the MapTypeId and set it to display.
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
   
-  // Try HTML5 geolocation
+  //  HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
@@ -344,7 +338,7 @@
         map: map,
         position: pos,
 	zoom: 10,
-        content: 'Hey, there you are!!!.'
+        content: 'You are here.'
       });
 
       map.setCenter(pos);
@@ -372,15 +366,10 @@ function handleNoGeolocation(errorFlag) {
 
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
-  
-  
-  
 }
   
 
-      
-      
-      google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
       
     </script>
   </head>
@@ -400,111 +389,25 @@ function handleNoGeolocation(errorFlag) {
   
   <div class="large-8 medium-8 columns"><h3 style="color: #ffffff; margin-left: 50px; margin-top: 10px;"></h3></div>
   
-  <a class="item" style="float: right; margin-top: -12px; margin-right: -5px;">
-    <i class="fa fa-search"></i>
-    
-  </a>
-	</div>
-	
-</div>
-	
-				   
-    </div>
-    </div>
-    
-    <div id="map-canvas" style="width: 400px; height: 420px; margin-left: -10px;"></div>
-    
-    
-      
-      <!---<div>
-	<h4>Camera Test</h4>
-	<div id="camera">
-	  <button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
-	  
-	    <div style="text-align:center;margin:20px;">
-	      
-	      <img id="cameraPic" src="" style="width:auto; height: 120px;"></img>
-	      
-	    </div>
-	  
-	</div>
-	
-      </div>--->
-      
-    <!---<div class="row">
-				    
-	  <div class="row collapse">
-	    <label style="margin-left: 15px; margin-bottom: 3px; font-size: .75em;"><b>Search</b></label>
-	      <div class="small-8 columns" style="margin-left: 15px; float: left;">
+  <div class="small-6 columns" style="float: left;">
 		<input type="text" placeholder="Where would you like to go?"/>
 	      </div>
-	      <div class="small-2 columns" style="margin-right: 15px; float: right;">
-		<button class="button tiny" style="float: right;">Go!</button>
-	      </div>
-	  </div>
-		
-	    		        
-    </div>--->
-    
-    <!---<div class="row">
-      <div class="large-12 columns" style="padding-left: 25px; padding-right: 25px;">
+	     
+    </div>
 	
-	<div id="accordion-container"> 
-	  <h2 class="accordion-header">Academic</h2> 
-	    <div class="accordion-content"> 
-	      <a href="http://www.google.com/maps/place/School+of+Journalism+and+Mass+Communication/@35.9100548,-79.0515085,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xf898408cfc23cf15"><h5>Carrol Hall</h5></a>
-	      <p style="margin-top: -10px;">School of Journalism <br>and Mass Communication</p>
-	      <a href="https://www.google.com/maps/place/School+of+Journalism+and+Mass+Communication/@35.9100548,-79.0515085,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xf898408cfc23cf15"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	      <hr>
-	      <a href="https://www.google.com/maps/@35.9123358,-79.0542149,19z"><h5>Hanes Art Center</h5></a>
-	      <p style="margin-top: -10px;">Art Deparment</p>
-	      <a href="https://www.google.com/maps/@35.9123358,-79.0542149,19z"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	    </div> 
-	  <h2 class="accordion-header">Athletic</h2> 
-	    <div class="accordion-content"> 
-	      <a href="http://www.google.com/maps/place/Kenan+Memorial+Stadium/@35.906556,-79.047047,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2952e6f9313:0x803c6101eac23ccc"><h5>Kenan Stadium</h5></a>
-	      <p style="margin-top: -10px;">Football Stadium</p>
-	      <a href="http://www.google.com/maps/place/Kenan+Memorial+Stadium/@35.906556,-79.047047,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2952e6f9313:0x803c6101eac23ccc"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	      <hr>
-	      <a href="http://www.google.com/maps/place/Dean+E.+Smith+Center/@35.9000469,-79.0437747,17z/data=!4m6!1m3!3m2!1s0x89acc2952e6f9313:0x803c6101eac23ccc!2sKenan+Memorial+Stadium!3m1!1s0x0:0x9927f586b02042ac"><h5>Dean Smith Center</h5></a>
-	      <p style="margin-top: -10px;">Basketball Stadium</p>
-	      <a href="http://www.google.com/maps/place/Dean+E.+Smith+Center/@35.9000469,-79.0437747,17z/data=!4m6!1m3!3m2!1s0x89acc2952e6f9313:0x803c6101eac23ccc!2sKenan+Memorial+Stadium!3m1!1s0x0:0x9927f586b02042ac"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	    </div>
-	  <h2 class="accordion-header">Student Life</h2> 
-	    <div class="accordion-content"> 
-	      <a href="http://www.google.com/maps/place/Carolina+Union/@35.9105088,-79.0477427,18z/data=!4m2!3m1!1s0x89acc2e97fb6e6d5:0x6575f308840822a4"><h5>Carolina Union</h5></a>
-	      <p style="margin-top: -10px;">Hub of student activity</p>
-	      <a href="https://www.google.com/maps/place/Carolina+Union/@35.9105088,-79.0477427,18z/data=!4m2!3m1!1s0x89acc2e97fb6e6d5:0x6575f308840822a4"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	      <hr>
-	      <a href="http://www.google.com/maps/place/Morehead-Cain+Foundation/@35.9137696,-79.0511974,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xe33ed2901c9a3259"><h5>Morehead Planetarium</h5></a>
-	      <p style="margin-top: -10px;">Museum</p>
-	      <a href="https://www.google.com/maps/place/Morehead-Cain+Foundation/@35.9137696,-79.0511974,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xe33ed2901c9a3259"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	    </div>
-	  <h2 class="accordion-header">Residential</h2> 
-	    <div class="accordion-content"> 
-	      <a href="http://www.google.com/maps/place/Craige+Residence+Hall/@35.9025243,-79.0451416,19z/data=!3m1!4b1!4m5!1m2!2m1!1scraige+dorm+unc!3m1!1s0x0:0x27d734dccf18de01"><h5>Craige Residence Hall</h5></a> 
-	      <p style="margin-top: -10px;">Large residence hall</p>
-	      <a href="http://www.google.com/maps/place/Craige+Residence+Hall/@35.9025243,-79.0451416,19z/data=!3m1!4b1!4m5!1m2!2m1!1scraige+dorm+unc!3m1!1s0x0:0x27d734dccf18de01"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	    </div>
-	  <h2 class="accordion-header">Medical</h2> 
-	    <div class="accordion-content"> 
-	      <a href="http://www.google.com/maps/place/UNC+Rep%2FInfertility/@35.904447,-79.049771,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2ee4e815f55:0xfb92cfc86c772ea9"><h5>UNC Hospitals</h5></a>
-	      <p style="margin-top: -10px;">Medical/Nursing schools, hospital</p>
-	      <a href="http://www.google.com/maps/place/UNC+Rep%2FInfertility/@35.904447,-79.049771,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2ee4e815f55:0xfb92cfc86c772ea9"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
-	    </div>
-	</div>--->
-
-
+    </div>
+	
+    </div>
+    </div>
     
-    
+    <div id="map-canvas" style="width: 400px; height: 420px; margin-left: -10px; margin-top: -8px;"></div>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
-    <script src="vallenato/vallenato.js" type="text/javascript"></script>
+   
 
-<link rel="stylesheet" href="vallenato/vallenato.css" type="text/css" media="screen">
   
   </body>
 </html>

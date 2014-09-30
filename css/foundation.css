@@ -2626,7 +2626,7 @@ meta.foundation-mq-topbar {
   width: 100%;
   font-size: 0;
   display: inline-block;
-  background: #333333; }
+  background: #56a0d3; }
   .icon-bar > * {
     text-align: center;
     font-size: 1rem;
@@ -2684,7 +2684,8 @@ meta.foundation-mq-topbar {
     .icon-bar > * i + label, .icon-bar > * img + label {
       margin-top: .0625rem; }
     .icon-bar > * i {
-      font-size: 1.5em; }
+      font-size: 1.5em;
+}
     .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
