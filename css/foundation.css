@@ -2684,7 +2684,7 @@ meta.foundation-mq-topbar {
     .icon-bar > * i + label, .icon-bar > * img + label {
       margin-top: .0625rem; }
     .icon-bar > * i {
-      font-size: 1.875rem; }
+      font-size: 1.5em; }
     .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
