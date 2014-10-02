@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PathMinder - Find Your Way</title>
+    
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link rel="stylesheet" href="css/foundation.css" />
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <style>
@@ -12,8 +14,8 @@
 	}
 	
 	#map-canvas {
-	height: 50%;
-	width: 91%;
+	height: 100%;
+	width: 100%;
 	margin: 0 0 20px 15px;
 	padding: 0 0 0 0;
 	}
@@ -78,13 +80,11 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Carroll Hall</h3>'+
-      '<img src="imgs/carroll.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p><b>Carroll Hall</b> is the home of the School of Journalism and Mass Communication.</p>'+
       '<p>Source: <a href="http://www.jomc.unc.edu/">'+
       'UNC JOMC Homepage</a> '+
       '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow1 = new google.maps.InfoWindow({
@@ -111,11 +111,9 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Carolina Union</h3>'+
-      '<img src="imgs/union.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p>This is the <b>Carolina Union</b>.</p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow2 = new google.maps.InfoWindow({
@@ -141,11 +139,9 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Morehead Planetarium</h3>'+
-      '<img src="imgs/planetarium.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p>This is the <b>Morehead Planetarium</b>. They make all kinds of cool shows and have summer camps for kids.</p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow3 = new google.maps.InfoWindow({
@@ -171,11 +167,9 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Hanes Art Center</h3>'+
-      '<img src="imgs/hanes.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p>This is the <b>Hanes Art Center</b>. This is where all of the art majors have class. There are always some cool sculptures in their lobby.</p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow4 = new google.maps.InfoWindow({
@@ -201,11 +195,9 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Kenan Memorial Stadium</h3>'+
-      '<img src="imgs/kenan.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p>This is <b>Kenan Memorial Stadium</b>. This is where all of the home football games are played. Go Heels!</p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow5 = new google.maps.InfoWindow({
@@ -231,11 +223,9 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Dean E. Smith Center</h3>'+
-      '<img src="imgs/smith.jpg" alt="" style="margin-bottom: 5px;">'+
       '<div id="bodyContent">'+
       '<p>This is the <b>Dean E. Smith Center</b>. This is where all of the home basketball games are played. Go Heels!</p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow6 = new google.maps.InfoWindow({
@@ -260,12 +250,10 @@
   var contentString7 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h3 id="firstHeading" class="firstHeading">University of North Carolina Hospitals</h3>'+
-      '<img src="imgs/hospitals.jpg" alt="" style="margin-bottom: 5px;">'+
+      '<h3 id="firstHeading" class="firstHeading">UNC Hospitals</h3>'+
       '<div id="bodyContent">'+
       '<p>This is the <b>UNC Hospitals</b> complex. This is where the massive hospital is. This is also where all of the medical and nursing school buildings are. </p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow7 = new google.maps.InfoWindow({
@@ -293,11 +281,10 @@
       '<div id="siteNotice">'+
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Craige Residence Hall</h3>'+
-      '<img src="imgs/craige.jpg" alt="" style="margin-bottom: 5px;">'+
+      
       '<div id="bodyContent">'+
       '<p>This is <b>Craige Residence Hall</b>. This is close to the Dean Smith Center and UNC Hospitals. </p>'+
      '</p>'+
-      '</div>'+
       '</div>';
 
   var infowindow8 = new google.maps.InfoWindow({
