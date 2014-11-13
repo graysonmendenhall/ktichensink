@@ -4857,7 +4857,9 @@ select::-ms-expand {
   padding-bottom: 0;
   text-align: center;
   line-height: 2.125rem;
-  border: none; }
+  border: none;
+  border-top-right-radius:2em;
+border-bottom-right-radius:2em;}
 
 .prefix.button {
   padding-left: 0;
@@ -4866,7 +4868,7 @@ select::-ms-expand {
   padding-bottom: 0;
   text-align: center;
   line-height: 2.125rem;
-  border: none; }
+  border: none;}
 
 .prefix.button.radius {
   border-radius: 0;
@@ -4953,7 +4955,9 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  border-top-left-radius:2em;
+  border-bottom-left-radius:2em;}
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="date"]:focus,
@@ -5066,7 +5070,9 @@ textarea {
   input[type="url"].radius,
   input[type="color"].radius,
   textarea.radius {
-    border-radius: 3px; }
+    border-radius: 3px;
+    border-top-left-radius:2em;
+    border-top-bottom-radius:2em;}
 
 input[type="submit"] {
   -webkit-appearance: none;
