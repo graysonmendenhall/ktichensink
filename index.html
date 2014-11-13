@@ -211,7 +211,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <!---<div id="map-canvas"></div>--->
     <div class="row collapse">
      
-	<div class="large-12 columns">
+	<div class="large-12 columns" style="margin-top: 30px;">
 	  <img src="imgs/icon_logo.png" alt="" height=100% width=100%>
 	</div>
       
@@ -223,31 +223,31 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<hr style="margin-bottom: 30px;">
       </div>
     
-    <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1.5em; margin-bottom: 30px;">Where Do You Need To Go?</div>
-    <div class="large-6 columns">
+    <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1.5em; line-height: 1em; margin-bottom: 35px;">Where Do You <br>Need To Go Today?</div>
+    <div class="large-6 columns" >
       <div class="row collapse postfix-round">
         <div class="small-9 columns">
-          <input type="text" placeholder="Enter Building Name">
+          <input type="text" placeholder="Search for a building">
         </div>
         <div class="small-3 columns">
           <a href="#" class="button postfix">Go!</a>
         </div>
       </div>
 
-    
+    <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1em; margin-bottom: 20px;">- OR -</div>
     
     <div id="panel" style="height: 40px;">
-    <b style="color: #FFFFFF;">Start: </b>
+    <!---<b style="color: #FFFFFF;">Start: </b>
     <select id="start">
       <option value="carroll hall, chapel hill, nc">Carroll Hall</option>
       <option value="hanes art center, chapel hill, nc">Hanes Art Center</option>
       <option value="125 W Franklin Street, Chapel Hill, NC 27514">Granville Towers</option>
       <option value="250 E Franklin Street, Chapel Hill, NC 27514">Morehead Planetarium</option>
       <option value="old well, chapel hill, nc">Old Well</option>
-    </select>
-    <b  style="color: #FFFFFF;">End: </b>
+    </select>--->
+    <b  style="color: #FFFFFF;"></b>
     <select id="end" onchange="calcRoute();">
-      <option value="graham student union, chapel hill, nc">Carolina Union</option>
+      <option value="graham student union, chapel hill, nc">Choose a destination</option>
       <option value="104 Stadium Drive, Chapel Hill, NC 27514">Kenan Stadium</option>
       <option value="300 Skipper Bowles Drive, Chapel Hill, NC 27514">Dean Smith Center</option>
       <option value="555 Paul Hardin Drive, Chapel Hill, NC 27514">Craige Residence Hall</option>
