@@ -1,0 +1,62 @@
+<!---<div class="row">
+				    
+	  <div class="row collapse">
+	    <label style="margin-left: 15px; margin-bottom: 3px; font-size: .75em;"><b>Search</b></label>
+	      <div class="small-8 columns" style="margin-left: 15px; float: left;">
+		<input type="text" placeholder="Where would you like to go?"/>
+	      </div>
+	      <div class="small-2 columns" style="margin-right: 15px; float: right;">
+		<button class="button tiny" style="float: right;">Go!</button>
+	      </div>
+	  </div>
+		
+	    		        
+    </div>--->
+    
+    <!---<div class="row">
+      <div class="large-12 columns" style="padding-left: 25px; padding-right: 25px;">
+	
+	<div id="accordion-container"> 
+	  <h2 class="accordion-header">Academic</h2> 
+	    <div class="accordion-content"> 
+	      <a href="http://www.google.com/maps/place/School+of+Journalism+and+Mass+Communication/@35.9100548,-79.0515085,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xf898408cfc23cf15"><h5>Carrol Hall</h5></a>
+	      <p style="margin-top: -10px;">School of Journalism <br>and Mass Communication</p>
+	      <a href="https://www.google.com/maps/place/School+of+Journalism+and+Mass+Communication/@35.9100548,-79.0515085,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xf898408cfc23cf15"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	      <hr>
+	      <a href="https://www.google.com/maps/@35.9123358,-79.0542149,19z"><h5>Hanes Art Center</h5></a>
+	      <p style="margin-top: -10px;">Art Deparment</p>
+	      <a href="https://www.google.com/maps/@35.9123358,-79.0542149,19z"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	    </div> 
+	  <h2 class="accordion-header">Athletic</h2> 
+	    <div class="accordion-content"> 
+	      <a href="http://www.google.com/maps/place/Kenan+Memorial+Stadium/@35.906556,-79.047047,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2952e6f9313:0x803c6101eac23ccc"><h5>Kenan Stadium</h5></a>
+	      <p style="margin-top: -10px;">Football Stadium</p>
+	      <a href="http://www.google.com/maps/place/Kenan+Memorial+Stadium/@35.906556,-79.047047,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2952e6f9313:0x803c6101eac23ccc"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	      <hr>
+	      <a href="http://www.google.com/maps/place/Dean+E.+Smith+Center/@35.9000469,-79.0437747,17z/data=!4m6!1m3!3m2!1s0x89acc2952e6f9313:0x803c6101eac23ccc!2sKenan+Memorial+Stadium!3m1!1s0x0:0x9927f586b02042ac"><h5>Dean Smith Center</h5></a>
+	      <p style="margin-top: -10px;">Basketball Stadium</p>
+	      <a href="http://www.google.com/maps/place/Dean+E.+Smith+Center/@35.9000469,-79.0437747,17z/data=!4m6!1m3!3m2!1s0x89acc2952e6f9313:0x803c6101eac23ccc!2sKenan+Memorial+Stadium!3m1!1s0x0:0x9927f586b02042ac"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	    </div>
+	  <h2 class="accordion-header">Student Life</h2> 
+	    <div class="accordion-content"> 
+	      <a href="http://www.google.com/maps/place/Carolina+Union/@35.9105088,-79.0477427,18z/data=!4m2!3m1!1s0x89acc2e97fb6e6d5:0x6575f308840822a4"><h5>Carolina Union</h5></a>
+	      <p style="margin-top: -10px;">Hub of student activity</p>
+	      <a href="https://www.google.com/maps/place/Carolina+Union/@35.9105088,-79.0477427,18z/data=!4m2!3m1!1s0x89acc2e97fb6e6d5:0x6575f308840822a4"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	      <hr>
+	      <a href="http://www.google.com/maps/place/Morehead-Cain+Foundation/@35.9137696,-79.0511974,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xe33ed2901c9a3259"><h5>Morehead Planetarium</h5></a>
+	      <p style="margin-top: -10px;">Museum</p>
+	      <a href="https://www.google.com/maps/place/Morehead-Cain+Foundation/@35.9137696,-79.0511974,18z/data=!4m6!1m3!3m2!1s0x89acc2e97fb6e6d5:0x6575f308840822a4!2sCarolina+Union!3m1!1s0x0:0xe33ed2901c9a3259"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	    </div>
+	  <h2 class="accordion-header">Residential</h2> 
+	    <div class="accordion-content"> 
+	      <a href="http://www.google.com/maps/place/Craige+Residence+Hall/@35.9025243,-79.0451416,19z/data=!3m1!4b1!4m5!1m2!2m1!1scraige+dorm+unc!3m1!1s0x0:0x27d734dccf18de01"><h5>Craige Residence Hall</h5></a> 
+	      <p style="margin-top: -10px;">Large residence hall</p>
+	      <a href="http://www.google.com/maps/place/Craige+Residence+Hall/@35.9025243,-79.0451416,19z/data=!3m1!4b1!4m5!1m2!2m1!1scraige+dorm+unc!3m1!1s0x0:0x27d734dccf18de01"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	    </div>
+	  <h2 class="accordion-header">Medical</h2> 
+	    <div class="accordion-content"> 
+	      <a href="http://www.google.com/maps/place/UNC+Rep%2FInfertility/@35.904447,-79.049771,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2ee4e815f55:0xfb92cfc86c772ea9"><h5>UNC Hospitals</h5></a>
+	      <p style="margin-top: -10px;">Medical/Nursing schools, hospital</p>
+	      <a href="http://www.google.com/maps/place/UNC+Rep%2FInfertility/@35.904447,-79.049771,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2ee4e815f55:0xfb92cfc86c772ea9"><i class="fa fa-arrow-circle-o-right" style="font-size: 3em; color: #666; float: right; margin-top: -62px; margin-left: -20px;"></i></a>
+	    </div>
+	</div>--->

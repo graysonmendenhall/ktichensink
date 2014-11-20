@@ -1,0 +1,10 @@
+{
+  "buildings" : {
+    "academic" : {
+      "cost" : 9000,
+      "date" : 20140901,
+      "desc" : "See a place few westerners have ever seen.",
+      "photos" : "https://c1.staticflickr.com/3/2257/1706418822_67531aa58e_q.jpg"
+    },
+  }
+}
