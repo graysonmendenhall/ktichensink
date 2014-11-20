@@ -66,6 +66,7 @@
 		<gap:plugin name="org.apache.cordova.vibration"  />
                 <gap:plugin name="org.apache.cordova.geolocation"  />
                 <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		<gap:splash src="splash.png"/>
 		
 		
 		<icon src="imgs/icons/AppIcon57x57.png" gap:platform="ios" width="57" height="57" />
@@ -82,6 +83,6 @@
 		<icon src="imgs/icons/AppIcon72x72@2x.png" gap:platform="android" gap:density="xxhdpi" />
 		<icon src="imgs/icons/iTunesArtwork@2x.png" gap:platform="android" gap:density="xxxhdpi" />
 		<icon src="imgs/icons/AppIcon72x72.png" />
-		<gap:splash src="splash.png"/>
+		
 		
 	</widget>
