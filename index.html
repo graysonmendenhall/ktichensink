@@ -32,13 +32,27 @@
 	//var pos;
 	//var end;
 	
-  
+    function initialize() {
 
   // Color styles for PathMinder map
  
+
+
+  
+  
+ 
+   
+   
+
+  
+  
   
 
 
+
+  var infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);
+}
 
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
@@ -67,19 +81,12 @@ function initialize() {
       ]
     }
   ];
-
-
-  var styledMap = new google.maps.StyledMapType(styles,
-    {name: "Styled Map"});
-
-
-  
-  
-  
-  
   
   directionsDisplay = new google.maps.DirectionsRenderer();
   var chapelhill = new google.maps.LatLng(35.906550, -79.047070);
+  
+  
+  
   var mapOptions = {
     zoom:14,
     center: chapelhill,
@@ -87,15 +94,11 @@ function initialize() {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     }
   };
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
   
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-    mapOptions);
-  
-
-  map.mapTypes.set('map_style', styledMap);
+   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
-  
-  
 }
   
   //function calcRoute(end) {
