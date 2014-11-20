@@ -32,10 +32,21 @@
 	//var pos;
 	//var end;
 	
-    function initialize() {
+  
 
   // Color styles for PathMinder map
- var styles = [
+ 
+  
+
+
+
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  
+  var styles = [
     {
       stylers: [
         { hue: "#56A0D3" },
@@ -61,51 +72,30 @@
   var styledMap = new google.maps.StyledMapType(styles,
     {name: "Styled Map"});
 
-  var mapOptions = {
-    zoom: 14,
-    center: new google.maps.LatLng(35.906550, -79.047070),
-    disableDefaultUI: true
-    
-  };
+
   
+  
+  
+  
+  
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chapelhill = new google.maps.LatLng(35.906550, -79.047070);
+  var mapOptions = {
+    zoom:14,
+    center: chapelhill,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
+  };
   
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   
-  
- 
-   
-   
 
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
   
   
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(35.906550, -79.047070),
-    content: content,
-    disableDefaultUI: true
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
-}
-
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var map;
-
-function initialize() {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  var chapelhill = new google.maps.LatLng(35.906550, -79.047070);
-  var mapOptions = {
-    zoom:14,
-    center: chapelhill
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  directionsDisplay.setMap(map);
 }
   
   //function calcRoute(end) {
@@ -115,7 +105,7 @@ function initialize() {
   var request = {
       origin:start,
       destination:end,
-      travelMode: google.maps.TravelMode.DRIVING
+      travelMode: google.maps.TravelMode.WALKING
   };
   directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
@@ -190,8 +180,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
       
     </div>
  </div>
- <div style="height: 125px; margin-top: 250px;"></div>
-	<div id="map-canvas"></div>
+ <div style="margin-top: 400px;"></div>
+	<div id="map-canvas" style="height: 400px;"></div>
    
     
     <script src="js/vendor/jquery.js"></script>
