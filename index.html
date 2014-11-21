@@ -86,11 +86,19 @@ function handleNoGeolocation(errorFlag) {
   map.setCenter(options.position);
 }
 
-function calcRoute() {
-  var start = document.getElementById('start').value;
-  var end = document.getElementById('end').value;
+function setEnd(value) {
+  console.log(value);
+  
+  
+  calcRoute(end);
+  
+}
+
+function calcRoute(end) {
+
+
   var request = {
-      origin:start,
+      origin:pos,
       destination:end,
       travelMode: google.maps.TravelMode.DRIVING
   };
@@ -149,13 +157,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <option value="old well, chapel hill, nc">Old Well</option>
     </select>--->
  
-    <select id="end" onchange="calcRoute();">
+    <select id="end" onchange="setEnd(this.value);">
       <option value="">Choose a destination</option>
-      <option value="graham student union, chapel hill, nc">Student Union</option>
-      <option value="104 Stadium Drive, Chapel Hill, NC 27514">Kenan Stadium</option>
-      <option value="555 Paul Hardin Drive, Chapel Hill, NC 27514">Craige Residence Hall</option>
-      <option value="300 Kenan Drive, Chapel Hill, NC 27599">Kenan-Flagler</option>
-      <option value="101 Manning Drive, Chapel Hill, NC 27514">UNC Hospitals</option>
+      <option value="35.910252,-79.047623">Graham Student Union</option>
+      <option value="35.906915,-79.047805">Kenan Memorial Stadium</option>
+      <option value="35.902722,-79.045123">Craige Residence Hall</option>
+      <option value="35.899861,-79.045984">Kenan-Flagler Business School</option>
+      <option value="35.903678,-79.050767">UNC Hospitals</option>
+      <option value="35.910345,-79.051563">Carroll Hall</option>
+      <option value="35.911056,-79.057385">Granville Towers</option>
+      <option value="35.912432,-79.054233">Hanes Art Center</option>
+      <option value="35.899480,-79.043916">Dean Smith Center</option>
+      <option value="35.913920,-79.050547">Morehead Planetarium</option>
+      <option value="35.906949,-79.047885">Old Well</option>
     </select>
     </div>
    
