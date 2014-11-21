@@ -33,15 +33,18 @@
 	var end;
 	
     
-
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
 var map;
 
 function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chapelhill = new google.maps.LatLng(35.906949, -79.047885);
   var mapOptions = {
-    zoom: 6
+    zoom: 12,
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
@@ -52,6 +55,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
+	zoom: 14,
         content: 'You Are Here.'
       });
 
@@ -80,6 +84,21 @@ function handleNoGeolocation(errorFlag) {
 
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
+}
+
+function calcRoute() {
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
