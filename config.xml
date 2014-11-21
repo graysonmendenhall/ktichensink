@@ -45,6 +45,9 @@
 		<preference name="LoadingDialog" value=","/> 
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="false" />
+	
+		
+		
 		<gap:platform name="ios" />
 		<gap:platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/camera"/>
@@ -66,6 +69,7 @@
 		<gap:plugin name="org.apache.cordova.vibration"  />
                 <gap:plugin name="org.apache.cordova.geolocation"  />
                 <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		<gap:plugin name="com.phonegap.plugin.statusbar" />
 		<gap:splash src="splash.png"/>
 		
 		

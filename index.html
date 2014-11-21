@@ -29,30 +29,10 @@
       
       <script type="text/javascript">
 	
-	//var pos;
-	//var end;
+	var pos;
+	var end;
 	
-    function initialize() {
-
-  // Color styles for PathMinder map
- 
-
-
-  
-  
- 
-   
-   
-
-  
-  
-  
-
-
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
-}
+    
 
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
@@ -60,28 +40,7 @@ var map;
 
 function initialize() {
   
-  var styles = [
-    {
-      stylers: [
-        { hue: "#56A0D3" },
-        { saturation: -20 }
-      ]
-    },{
-      featureType: "road",
-      elementType: "geometry",
-      stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels",
-      stylers: [
-        { visibility: "off" }
-      ]
-    }
-  ];
-  
+ 
   directionsDisplay = new google.maps.DirectionsRenderer();
   var chapelhill = new google.maps.LatLng(35.906550, -79.047070);
   
@@ -90,15 +49,12 @@ function initialize() {
   var mapOptions = {
     zoom:14,
     center: chapelhill,
-    mapTypeControlOptions: {
-      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-    }
+    
   };
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   directionsDisplay.setMap(map);
   
-   map.mapTypes.set('map_style', styledMap);
-  map.setMapTypeId('map_style');
+
 }
   
   //function calcRoute(end) {
@@ -106,7 +62,7 @@ function initialize() {
   var start = document.getElementById('start').value;
   var end = document.getElementById('end').value;
   var request = {
-      origin:start,
+      origin:pos,
       destination:end,
       travelMode: google.maps.TravelMode.WALKING
   };
@@ -115,6 +71,45 @@ function initialize() {
       directionsDisplay.setDirections(response);
     }
   });
+}
+
+// Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: 'Location found using HTML5.'
+      });
+
+      map.setCenter(pos);
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
+
+  var options = {
+    map: map,
+    position: new google.maps.LatLng(60, 105),
+    content: content
+  };
+
+  var infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -141,7 +136,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<hr style="margin-bottom: 30px;">
       </div>
     
-    <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1.5em; line-height: 1em; margin-bottom: 35px;">Where Do You <br>Need To Go Today?</div>
+    <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1.5em; line-height: 1em; margin-bottom: 35px;">Where Do You Need To Go?</div>
     <div class="large-6 columns" >
       <div class="row collapse postfix-round">
         <div class="small-9 columns">
@@ -155,7 +150,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div class="large-6 columns" style="color: #FFFFFF; text-align: center; font-size: 1em; margin-bottom: 20px;">- OR -</div>
     
     <div id="panel" style="height: 40px;">
-    <b style="color: #FFFFFF;">Start: </b>
+    <!---<b style="color: #FFFFFF;">Start: </b>
     <select id="start" onchange="calcRoute();">
       <option value="carroll hall, chapel hill, nc">Carroll Hall</option>
       <option value="125 W Franklin Street, Chapel Hill, NC 27514">Granville Towers</option>
@@ -163,9 +158,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <option value="300 Skipper Bowles Drive, Chapel Hill, NC 27514">Dean Smith Center</option>
       <option value="250 E Franklin Street, Chapel Hill, NC 27514">Morehead Planetarium</option>
       <option value="old well, chapel hill, nc">Old Well</option>
-    </select>
-    <b  style="color: #FFFFFF;"></b>
+    </select>--->
+ 
     <select id="end" onchange="calcRoute();">
+      <option value="">Choose a destination</option>
       <option value="graham student union, chapel hill, nc">Student Union</option>
       <option value="104 Stadium Drive, Chapel Hill, NC 27514">Kenan Stadium</option>
       <option value="555 Paul Hardin Drive, Chapel Hill, NC 27514">Craige Residence Hall</option>
@@ -183,7 +179,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       
     </div>
  </div>
- <div style="margin-top: 400px;"></div>
+ <div style="margin-top: 300px;"></div>
 	<div id="map-canvas" style="height: 400px;"></div>
    
     
