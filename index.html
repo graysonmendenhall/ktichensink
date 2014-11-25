@@ -57,7 +57,8 @@ function initialize() {
         map: map,
         position: pos,
 	zoom: 14,
-        content: 'You Are Here.'
+        content: 'You.',
+	maxWidth: 300
       });
 
       map.setCenter(pos);
@@ -117,7 +118,7 @@ function calcRoute(end) {
   var request = {
       origin:pos,
       destination:end,
-      travelMode: google.maps.TravelMode.DRIVING
+      travelMode: google.maps.TravelMode.WALKING
   };
   directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
