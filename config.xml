@@ -70,7 +70,7 @@
                 <gap:plugin name="org.apache.cordova.geolocation"  />
                 <gap:plugin name="com.phonegap.plugins.barcodescanner" />
 		<gap:plugin name="com.phonegap.plugin.statusbar" />
-		<gap:splash src="splash.png"/>
+		<gap:splash src="splash.png" gap:platform="ios" width="320" height="480" />
 		
 		
 		<icon src="imgs/icons/AppIcon57x57.png" gap:platform="ios" width="57" height="57" />
