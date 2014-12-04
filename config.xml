@@ -89,7 +89,7 @@
 		<icon src="imgs/icons/iTunesArtwork@2x.png" gap:platform="android" gap:density="xxxhdpi" />
 		<icon src="imgs/icons/AppIcon72x72.png" />
 		
-		<gap:splash src="splash.png" gap:platform="ios" width="640" height="1136" />
+		<gap:splash src="splash.png" gap:platform="ios" width="640" height="960" />
 		
 		
 	</widget>
