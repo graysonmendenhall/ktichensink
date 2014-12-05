@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.yourdomainname.com"
+		id        = "com.graysonmendenhall.pathminder"
 		versionCode="1"
 		version   = "1">
 		<name>PathMinder</name>
@@ -68,8 +68,6 @@
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		<gap:plugin name="org.apache.cordova.vibration"  />
                 <gap:plugin name="org.apache.cordova.geolocation"  />
-                <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-		<gap:plugin name="com.phonegap.plugin.statusbar" />
 		
 		
 		
